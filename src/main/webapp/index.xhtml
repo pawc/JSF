@@ -6,14 +6,24 @@
 	xmlns:c="http://java.sun.com/jsp/jstl/core"
 	>
 <body>
+
 	<c:set var="myvar" value="choice: " scope="session" />
 	#{myvar}
+
 	#{foo.getMessage()}
+
 	<h:form>
 	<h:commandButton value="one" action="#{foo.setMessage1()}" />
 	</h:form>
+
 	<h:form>
 	<h:commandButton value="two" action="#{foo.setMessage2()}" />
 	</h:form>
+
+	<h:form>
+	<h:inputText id="pole" binding="#{val}" />
+	<h:commandButton value="change" action="#{foo.setMessage(val.value)}" />
+	</h:form>
+
 </body>
 </html>

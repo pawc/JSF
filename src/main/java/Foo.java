@@ -11,6 +11,10 @@ public class Foo{
 	public Foo(){
 	}
 
+	public void setMessage(String value){
+		this.message=value;
+	}
+
 	public void setMessage1(){
 		this.message="one";
 	}
